@@ -1,7 +1,8 @@
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
+
 import { logo } from "../utils/constants";
-import SearchBar from "./SearchBar";
+import { SearchBar } from "./";
 
 const Navbar = () => (
   <Stack
@@ -15,29 +16,21 @@ const Navbar = () => (
       justifyContent: "space-between",
     }}
   >
-    <Stack>
-      <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img
-          style={{ paddingLeft: "20px" }}
-          src={logo}
-          alt="logo"
-          height={45}
-        />
-        <figcaption
-          style={{
-            fontFamily: "Roboto",
-            fontSize: "28px",
-            color: "#fff",
-            letterSpacing: "-2px",
-          }}
-        >
-          YouTube
-        </figcaption>
-      </Link>
-    </Stack>
-    <Stack sx={{ margin: "auto", paddingRight: "100px" }}>
-      <SearchBar />
-    </Stack>
+    <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+      <img src={logo} alt="logo" height={45} />
+      <figcaption
+        style={{
+          fontFamily: "Roboto",
+          fontSize: "28px",
+          color: "#fff",
+          letterSpacing: "-2px",
+        }}
+      >
+        YouTube
+      </figcaption>
+    </Link>
+    <SearchBar />
   </Stack>
 );
+
 export default Navbar;

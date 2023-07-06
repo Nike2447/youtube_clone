@@ -24,7 +24,7 @@ const SearchBar = () => {
         border: "1px solid gray",
         pl: 2,
         boxShadow: "none",
-        mr: { sm: 5 },
+        mr: { sm: 2 },
         background: "#000",
       }}
     >
